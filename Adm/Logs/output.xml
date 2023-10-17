@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231017 20:20:35.079" rpa="false" schemaversion="4">
+<suite id="s1" name="Adm" source="/Users/alexandresoaresdeoliveira/Documents/Altoro/Adm/Adm.robot">
+<test id="s1-t1" name="Cenario: Acessar tela de edicao de contas" line="8">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231017 20:20:35.159" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231017 20:20:35.158" endtime="20231017 20:20:37.413"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:35.158" endtime="20231017 20:20:37.413"/>
+</kw>
+<kw name="Dado que desejo acessar a tela de edicao de contas" library="ResouceAdm">
+<kw name="Fazer Login" library="LoginPage">
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<kw name="Acessa Tela Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:AccountLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:37.416" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231017 20:20:37.415" endtime="20231017 20:20:37.657"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:37.415" endtime="20231017 20:20:37.657"/>
+</kw>
+<kw name="Usuario" library="LoginPage">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:uid</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:37.658" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231017 20:20:37.657" endtime="20231017 20:20:37.772"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:37.657" endtime="20231017 20:20:37.772"/>
+</kw>
+<kw name="Senha" library="LoginPage">
+<arg>${pswd}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:passw</arg>
+<arg>${pswd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:37.773" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231017 20:20:37.790" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231017 20:20:37.808" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231017 20:20:37.773" endtime="20231017 20:20:37.808"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:37.772" endtime="20231017 20:20:37.808"/>
+</kw>
+<kw name="Botao Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:btnSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:37.808" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231017 20:20:37.808" endtime="20231017 20:20:38.290"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:37.808" endtime="20231017 20:20:38.290"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:37.414" endtime="20231017 20:20:38.290"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:37.414" endtime="20231017 20:20:38.290"/>
+</kw>
+<kw name="Quando selecionar a opcao na aba de administracao" library="ResouceAdm">
+<kw name="Btn Editar Usuario" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:38.291" level="INFO">Clicking element 'xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a'.</msg>
+<status status="PASS" starttime="20231017 20:20:38.290" endtime="20231017 20:20:38.507"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.290" endtime="20231017 20:20:38.507"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.290" endtime="20231017 20:20:38.507"/>
+</kw>
+<kw name="Entao sera apresentada a tela com as opcoes disponiveis" library="ResouceAdm">
+<kw name="Valida Tela Usuario" library="AdmPage">
+<arg>${msgTelaAdm}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1</arg>
+<arg>${msgTelaAdm}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231017 20:20:38.508" level="INFO">Verifying element 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1' contains exact text 'Edit User Information'.</msg>
+<status status="PASS" starttime="20231017 20:20:38.507" endtime="20231017 20:20:38.531"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.507" endtime="20231017 20:20:38.531"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.507" endtime="20231017 20:20:38.531"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231017 20:20:38.726" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231017 20:20:38.532" endtime="20231017 20:20:38.726"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231017 20:20:38.726" endtime="20231017 20:20:38.803"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.532" endtime="20231017 20:20:38.803"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:35.158" endtime="20231017 20:20:38.803"/>
+</test>
+<test id="s1-t2" name="Cenario: Adicionar conta em um usuario" line="13">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231017 20:20:38.804" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231017 20:20:38.803" endtime="20231017 20:20:41.029"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.803" endtime="20231017 20:20:41.029"/>
+</kw>
+<kw name="Dado que desejo adicionar uma nova conta a um cliente especifico" library="ResouceAdm">
+<kw name="Fazer Login" library="LoginPage">
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<kw name="Acessa Tela Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:AccountLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:41.031" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231017 20:20:41.030" endtime="20231017 20:20:41.261"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.030" endtime="20231017 20:20:41.261"/>
+</kw>
+<kw name="Usuario" library="LoginPage">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:uid</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:41.262" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231017 20:20:41.262" endtime="20231017 20:20:41.365"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.261" endtime="20231017 20:20:41.365"/>
+</kw>
+<kw name="Senha" library="LoginPage">
+<arg>${pswd}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:passw</arg>
+<arg>${pswd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:41.366" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231017 20:20:41.382" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231017 20:20:41.405" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231017 20:20:41.366" endtime="20231017 20:20:41.406"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.365" endtime="20231017 20:20:41.406"/>
+</kw>
+<kw name="Botao Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:btnSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:41.406" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231017 20:20:41.406" endtime="20231017 20:20:41.798"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.406" endtime="20231017 20:20:41.799"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.030" endtime="20231017 20:20:41.799"/>
+</kw>
+<kw name="Btn Editar Usuario" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:41.799" level="INFO">Clicking element 'xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a'.</msg>
+<status status="PASS" starttime="20231017 20:20:41.799" endtime="20231017 20:20:42.020"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.799" endtime="20231017 20:20:42.020"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:41.029" endtime="20231017 20:20:42.020"/>
+</kw>
+<kw name="Quando selecionar o cliente que desejo adiconar uma nova conta" library="ResouceAdm">
+<kw name="Seleciona Usuario Add Conta" library="AdmPage">
+<arg>${userTuser}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[3]/td[1]/select</arg>
+<arg>${opcaoUsuario}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231017 20:20:42.021" level="INFO">Selecting options from selection list 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[3]/td[1]/select' by value tuser.</msg>
+<status status="PASS" starttime="20231017 20:20:42.020" endtime="20231017 20:20:42.064"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.020" endtime="20231017 20:20:42.064"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.020" endtime="20231017 20:20:42.064"/>
+</kw>
+<kw name="E adicionar o tipo de conta desejada" library="ResouceAdm">
+<kw name="Seleciona Tipo Conta" library="AdmPage">
+<arg>${ccIra}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>name:accttypes</arg>
+<arg>${opcaoConta}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231017 20:20:42.065" level="INFO">Selecting options from selection list 'name:accttypes' by value IRA.</msg>
+<status status="PASS" starttime="20231017 20:20:42.065" endtime="20231017 20:20:42.093"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.065" endtime="20231017 20:20:42.093"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.064" endtime="20231017 20:20:42.093"/>
+</kw>
+<kw name="Entao será realizado a adicao ao usuario" library="ResouceAdm">
+<kw name="Btn Adiciona Tipo Conta" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[3]/td[4]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:42.094" level="INFO">Clicking element 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[3]/td[4]/input'.</msg>
+<status status="PASS" starttime="20231017 20:20:42.093" endtime="20231017 20:20:42.293"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.093" endtime="20231017 20:20:42.293"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.093" endtime="20231017 20:20:42.293"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231017 20:20:42.529" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231017 20:20:42.294" endtime="20231017 20:20:42.529"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231017 20:20:42.530" endtime="20231017 20:20:42.598"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.294" endtime="20231017 20:20:42.598"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:38.803" endtime="20231017 20:20:42.598"/>
+</test>
+<test id="s1-t3" name="Cenario: Alterar a senha de um cliente" line="19">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231017 20:20:42.599" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231017 20:20:42.599" endtime="20231017 20:20:44.819"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.599" endtime="20231017 20:20:44.819"/>
+</kw>
+<kw name="Dado que desejo alterar a senha de um determinado cliente" library="ResouceAdm">
+<kw name="Fazer Login" library="LoginPage">
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<kw name="Acessa Tela Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:AccountLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:44.821" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231017 20:20:44.821" endtime="20231017 20:20:45.052"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:44.820" endtime="20231017 20:20:45.052"/>
+</kw>
+<kw name="Usuario" library="LoginPage">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:uid</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:45.052" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231017 20:20:45.052" endtime="20231017 20:20:45.153"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.052" endtime="20231017 20:20:45.153"/>
+</kw>
+<kw name="Senha" library="LoginPage">
+<arg>${pswd}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:passw</arg>
+<arg>${pswd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:45.153" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231017 20:20:45.169" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231017 20:20:45.189" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231017 20:20:45.153" endtime="20231017 20:20:45.189"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.153" endtime="20231017 20:20:45.189"/>
+</kw>
+<kw name="Botao Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:btnSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:45.189" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231017 20:20:45.189" endtime="20231017 20:20:45.658"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.189" endtime="20231017 20:20:45.658"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:44.820" endtime="20231017 20:20:45.658"/>
+</kw>
+<kw name="Btn Editar Usuario" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:45.659" level="INFO">Clicking element 'xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a'.</msg>
+<status status="PASS" starttime="20231017 20:20:45.658" endtime="20231017 20:20:45.884"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.658" endtime="20231017 20:20:45.884"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:44.820" endtime="20231017 20:20:45.884"/>
+</kw>
+<kw name="Quando selecionar o cliente que desejo alterar a senha" library="ResouceAdm">
+<kw name="Seleciona Usuario Troca Senha" library="AdmPage">
+<arg>${userJdoe}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[6]/td[1]/select[@id='username']</arg>
+<arg>${opcaoUsuario}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231017 20:20:45.885" level="INFO">Selecting options from selection list 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[6]/td[1]/select[@id='username']' by value jdoe.</msg>
+<status status="PASS" starttime="20231017 20:20:45.885" endtime="20231017 20:20:45.933"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.884" endtime="20231017 20:20:45.933"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.884" endtime="20231017 20:20:45.933"/>
+</kw>
+<kw name="E realizar a adicao de uma nova senha" library="ResouceAdm">
+<kw name="Nova Senha" library="AdmPage">
+<arg>${novaSenha}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[6]/td[2]/input[@name='password1']</arg>
+<arg>${newpswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:45.934" level="INFO">Typing text 'admin123' into text field 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[6]/td[2]/input[@name='password1']'.</msg>
+<status status="PASS" starttime="20231017 20:20:45.934" endtime="20231017 20:20:45.969"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.934" endtime="20231017 20:20:45.970"/>
+</kw>
+<kw name="Confirma Nova Senha" library="AdmPage">
+<arg>${novaSenha}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[6]/td[3]/input[@name='password2']</arg>
+<arg>${newpswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:45.970" level="INFO">Typing text 'admin123' into text field 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[6]/td[3]/input[@name='password2']'.</msg>
+<status status="PASS" starttime="20231017 20:20:45.970" endtime="20231017 20:20:46.003"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.970" endtime="20231017 20:20:46.003"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:45.934" endtime="20231017 20:20:46.003"/>
+</kw>
+<kw name="Entao será realizado a alteracao de senha do usuario" library="ResouceAdm">
+<kw name="Btn Altera Senha" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:change</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:46.004" level="INFO">Clicking element 'name:change'.</msg>
+<status status="PASS" starttime="20231017 20:20:46.003" endtime="20231017 20:20:46.211"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:46.003" endtime="20231017 20:20:46.212"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:46.003" endtime="20231017 20:20:46.212"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231017 20:20:46.433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231017 20:20:46.212" endtime="20231017 20:20:46.433"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231017 20:20:46.433" endtime="20231017 20:20:46.502"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:46.212" endtime="20231017 20:20:46.502"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:42.598" endtime="20231017 20:20:46.502"/>
+</test>
+<test id="s1-t4" name="Cenario: Adicionar um novo cliente" line="25">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231017 20:20:46.503" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231017 20:20:46.502" endtime="20231017 20:20:48.661"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:46.502" endtime="20231017 20:20:48.661"/>
+</kw>
+<kw name="Dado que desejo adicionar um novo cliente" library="ResouceAdm">
+<kw name="Fazer Login" library="LoginPage">
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<kw name="Acessa Tela Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:AccountLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:48.663" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231017 20:20:48.663" endtime="20231017 20:20:48.896"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:48.662" endtime="20231017 20:20:48.896"/>
+</kw>
+<kw name="Usuario" library="LoginPage">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:uid</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:48.897" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231017 20:20:48.896" endtime="20231017 20:20:49.002"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:48.896" endtime="20231017 20:20:49.002"/>
+</kw>
+<kw name="Senha" library="LoginPage">
+<arg>${pswd}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:passw</arg>
+<arg>${pswd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.003" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231017 20:20:49.020" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231017 20:20:49.040" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231017 20:20:49.003" endtime="20231017 20:20:49.040"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.002" endtime="20231017 20:20:49.040"/>
+</kw>
+<kw name="Botao Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:btnSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.040" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.040" endtime="20231017 20:20:49.445"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.040" endtime="20231017 20:20:49.445"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:48.662" endtime="20231017 20:20:49.445"/>
+</kw>
+<kw name="Btn Editar Usuario" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.446" level="INFO">Clicking element 'xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.446" endtime="20231017 20:20:49.737"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.445" endtime="20231017 20:20:49.737"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:48.662" endtime="20231017 20:20:49.737"/>
+</kw>
+<kw name="Quando preencher os dados necessários" library="ResouceAdm">
+<kw name="Nome Novo Usuario" library="AdmPage">
+<arg>${nome}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:firstname</arg>
+<arg>${novoNome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.738" level="INFO">Typing text 'Eliud' into text field 'name:firstname'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.738" endtime="20231017 20:20:49.787"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.738" endtime="20231017 20:20:49.787"/>
+</kw>
+<kw name="Sobrenome Novo Usuario" library="AdmPage">
+<arg>${sobrenome}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:lastname</arg>
+<arg>${novoSobrenome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.787" level="INFO">Typing text 'Kipchoge' into text field 'name:lastname'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.787" endtime="20231017 20:20:49.822"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.787" endtime="20231017 20:20:49.822"/>
+</kw>
+<kw name="Novo Usuario" library="AdmPage">
+<arg>${userNew}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[9]/td[2]/input[@name='username']</arg>
+<arg>${novoUsuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.822" level="INFO">Typing text 'elikip' into text field 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[9]/td[2]/input[@name='username']'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.822" endtime="20231017 20:20:49.856"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.822" endtime="20231017 20:20:49.856"/>
+</kw>
+<kw name="Senha Novo Usuario" library="AdmPage">
+<arg>${novaSenha}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[9]/td[3]/input[@name='password1']</arg>
+<arg>${novaSenha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.856" level="INFO">Typing text 'admin123' into text field 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[9]/td[3]/input[@name='password1']'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.856" endtime="20231017 20:20:49.889"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.856" endtime="20231017 20:20:49.889"/>
+</kw>
+<kw name="Confirma Senha Novo Usuario" library="AdmPage">
+<arg>${novaSenha}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[9]/td[3]/input[@name='password2']</arg>
+<arg>${novaSenha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.889" level="INFO">Typing text 'admin123' into text field 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/table/tbody/tr[9]/td[3]/input[@name='password2']'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.889" endtime="20231017 20:20:49.923"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.889" endtime="20231017 20:20:49.923"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.737" endtime="20231017 20:20:49.923"/>
+</kw>
+<kw name="Entao será aberta uma nova conta" library="ResouceAdm">
+<kw name="Btn Novo Usuario" library="AdmPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:add</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231017 20:20:49.924" level="INFO">Clicking element 'name:add'.</msg>
+<status status="PASS" starttime="20231017 20:20:49.924" endtime="20231017 20:20:50.156"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.924" endtime="20231017 20:20:50.156"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:49.923" endtime="20231017 20:20:50.156"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231017 20:20:50.367" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231017 20:20:50.157" endtime="20231017 20:20:50.367"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231017 20:20:50.368" endtime="20231017 20:20:50.435"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:50.156" endtime="20231017 20:20:50.435"/>
+</kw>
+<status status="PASS" starttime="20231017 20:20:46.502" endtime="20231017 20:20:50.435"/>
+</test>
+<status status="PASS" starttime="20231017 20:20:35.080" endtime="20231017 20:20:50.435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Adm">Adm</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
