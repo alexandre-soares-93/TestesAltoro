@@ -9,7 +9,7 @@ Resource       TransferenciaPage.robot
 ${msgTelaTranferencia}    Transfer Funds
 ${msgTedCorporate}        500.0 was successfully transferred from Account 800000 into Account 800001
 ${msgTedChecking}         500.0 was successfully transferred from Account 800001 into Account 800000
-${vlTed}                  500
+${valorlTed}                  500
 ${ccCorporate}            800000
 ${ccChecking}             800001
 
@@ -36,7 +36,7 @@ Quando selecionar a conta checking como favorecido
     Recebe Ted    ${ccChecking}
 
 E informar o valor que desejo enviar
-    Insere valor Ted    ${vlTed}
+    Insere valor Ted    ${valorlTed}
     Btn Confirma Ted
 
 Entao será feita a operacao para conta checking
