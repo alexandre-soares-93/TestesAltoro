@@ -1,9 +1,6 @@
 *** Settings ***
 Library        SeleniumLibrary
 
-*** Variables ***
-
-
 *** Keywords ***
 Btn Editar Usuario
     Click Element    xpath://*[@id="_ctl0__ctl0_Content_Administration"]/ul/li/a

@@ -34,7 +34,6 @@ Acessa Tela Bem Vindo
 
 
 Escolhe e Acessa com Conta Corporate
-    Seleciona Conta Corporate
     Acessa Historico Contas
 
 Escolhe e Acessa com Conta Checking
