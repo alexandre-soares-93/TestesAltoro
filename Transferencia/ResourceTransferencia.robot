@@ -9,7 +9,7 @@ Resource       TransferenciaPage.robot
 ${msgTelaTranferencia}    Transfer Funds
 ${msgTedCorporate}        500.0 was successfully transferred from Account 800000 into Account 800001
 ${msgTedChecking}         500.0 was successfully transferred from Account 800001 into Account 800000
-${valorlTed}                  500
+${valorlTed}              500
 ${ccCorporate}            800000
 ${ccChecking}             800001
 
