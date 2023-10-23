@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231023 19:47:57.769" rpa="false" schemaversion="4">
+<suite id="s1" name="Formulario" source="/Users/alexandresoaresdeoliveira/Documents/Altoro/Formularios/Formulario.robot">
+<test id="s1-t1" name="Cenario: Envio de Feedback sem acesso a conta" line="8">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231023 19:47:57.846" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231023 19:47:57.845" endtime="20231023 19:47:59.724"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:57.845" endtime="20231023 19:47:59.725"/>
+</kw>
+<kw name="Dado que desejo enviar um email ao sac da Altoro sem estar logado na conta" library="ResourceFormulario">
+<kw name="Btn Feedback" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:HyperLink4</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:47:59.728" level="INFO">Clicking element 'id:HyperLink4'.</msg>
+<status status="PASS" starttime="20231023 19:47:59.726" endtime="20231023 19:47:59.948"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:59.726" endtime="20231023 19:47:59.948"/>
+</kw>
+<kw name="Valida Tela Feedback" library="FormularioPage">
+<arg>${msgTelaFeedback}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgTelaFeedbak}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:47:59.949" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Feedback'.</msg>
+<status status="PASS" starttime="20231023 19:47:59.949" endtime="20231023 19:47:59.970"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:59.948" endtime="20231023 19:47:59.970"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:59.725" endtime="20231023 19:47:59.970"/>
+</kw>
+<kw name="Quando preencher os dados do formulario" library="ResourceFormulario">
+<kw name="Insere Nome" library="FormularioPage">
+<arg>${nome}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:47:59.971" level="INFO">Typing text 'Eliud Kipchoge' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20231023 19:47:59.971" endtime="20231023 19:48:00.069"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:59.970" endtime="20231023 19:48:00.069"/>
+</kw>
+<kw name="Insere Email" library="FormularioPage">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email_addr</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:00.069" level="INFO">Typing text 'eliud_kipchoge@gmail.com' into text field 'name:email_addr'.</msg>
+<status status="PASS" starttime="20231023 19:48:00.069" endtime="20231023 19:48:00.107"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.069" endtime="20231023 19:48:00.107"/>
+</kw>
+<kw name="Insere Assunto" library="FormularioPage">
+<arg>${assunto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:subject</arg>
+<arg>${assunto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:00.107" level="INFO">Typing text 'Investimentos - Teste' into text field 'name:subject'.</msg>
+<status status="PASS" starttime="20231023 19:48:00.107" endtime="20231023 19:48:00.142"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.107" endtime="20231023 19:48:00.142"/>
+</kw>
+<kw name="Insere Texto" library="FormularioPage">
+<arg>${texto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:comments</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:00.143" level="INFO">Typing text 'Compre tudo em PETR3' into text field 'name:comments'.</msg>
+<status status="PASS" starttime="20231023 19:48:00.142" endtime="20231023 19:48:00.174"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.142" endtime="20231023 19:48:00.175"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:59.970" endtime="20231023 19:48:00.175"/>
+</kw>
+<kw name="Entao sera enviado o email ao time responsavel" library="ResourceFormulario">
+<kw name="Btn Enviar" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:00.175" level="INFO">Clicking element 'name:submit'.</msg>
+<status status="PASS" starttime="20231023 19:48:00.175" endtime="20231023 19:48:00.379"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.175" endtime="20231023 19:48:00.379"/>
+</kw>
+<kw name="Valida Envio Feedback" library="FormularioPage">
+<arg>${msgEnvio}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgEnvio}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:00.380" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Thank You'.</msg>
+<status status="PASS" starttime="20231023 19:48:00.380" endtime="20231023 19:48:00.392"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.380" endtime="20231023 19:48:00.392"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.175" endtime="20231023 19:48:00.392"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231023 19:48:00.589" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231023 19:48:00.393" endtime="20231023 19:48:00.589"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231023 19:48:00.589" endtime="20231023 19:48:00.668"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.393" endtime="20231023 19:48:00.668"/>
+</kw>
+<status status="PASS" starttime="20231023 19:47:57.845" endtime="20231023 19:48:00.668"/>
+</test>
+<test id="s1-t2" name="Cenario: Limpar o formulario sem acesso a conta" line="13">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231023 19:48:00.669" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231023 19:48:00.669" endtime="20231023 19:48:02.674"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.668" endtime="20231023 19:48:02.674"/>
+</kw>
+<kw name="Dado que desejo enviar um email ao sac da Altoro sem estar logado na conta" library="ResourceFormulario">
+<kw name="Btn Feedback" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:HyperLink4</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:02.676" level="INFO">Clicking element 'id:HyperLink4'.</msg>
+<status status="PASS" starttime="20231023 19:48:02.675" endtime="20231023 19:48:02.905"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:02.675" endtime="20231023 19:48:02.906"/>
+</kw>
+<kw name="Valida Tela Feedback" library="FormularioPage">
+<arg>${msgTelaFeedback}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgTelaFeedbak}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:02.907" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Feedback'.</msg>
+<status status="PASS" starttime="20231023 19:48:02.906" endtime="20231023 19:48:02.926"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:02.906" endtime="20231023 19:48:02.926"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:02.674" endtime="20231023 19:48:02.926"/>
+</kw>
+<kw name="Quando preencher os dados do formulario" library="ResourceFormulario">
+<kw name="Insere Nome" library="FormularioPage">
+<arg>${nome}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:02.927" level="INFO">Typing text 'Eliud Kipchoge' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20231023 19:48:02.927" endtime="20231023 19:48:03.031"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:02.927" endtime="20231023 19:48:03.031"/>
+</kw>
+<kw name="Insere Email" library="FormularioPage">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email_addr</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:03.032" level="INFO">Typing text 'eliud_kipchoge@gmail.com' into text field 'name:email_addr'.</msg>
+<status status="PASS" starttime="20231023 19:48:03.031" endtime="20231023 19:48:03.068"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.031" endtime="20231023 19:48:03.068"/>
+</kw>
+<kw name="Insere Assunto" library="FormularioPage">
+<arg>${assunto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:subject</arg>
+<arg>${assunto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:03.068" level="INFO">Typing text 'Investimentos - Teste' into text field 'name:subject'.</msg>
+<status status="PASS" starttime="20231023 19:48:03.068" endtime="20231023 19:48:03.103"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.068" endtime="20231023 19:48:03.103"/>
+</kw>
+<kw name="Insere Texto" library="FormularioPage">
+<arg>${texto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:comments</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:03.104" level="INFO">Typing text 'Compre tudo em PETR3' into text field 'name:comments'.</msg>
+<status status="PASS" starttime="20231023 19:48:03.104" endtime="20231023 19:48:03.137"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.103" endtime="20231023 19:48:03.137"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:02.927" endtime="20231023 19:48:03.137"/>
+</kw>
+<kw name="E clicar no botao que apaga as informacoes preenchidas" library="ResourceFormulario">
+<kw name="Btn Limpar Formulario" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://Input[@type='reset']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:03.137" level="INFO">Clicking element 'xpath://Input[@type='reset']'.</msg>
+<status status="PASS" starttime="20231023 19:48:03.137" endtime="20231023 19:48:03.158"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.137" endtime="20231023 19:48:03.158"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.137" endtime="20231023 19:48:03.158"/>
+</kw>
+<kw name="Entao formulario estara sem os dados fornecidos" library="ResourceFormulario">
+<kw name="Valida Tela Feedback" library="FormularioPage">
+<arg>${msgTelaFeedback}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgTelaFeedbak}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:03.159" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Feedback'.</msg>
+<status status="PASS" starttime="20231023 19:48:03.159" endtime="20231023 19:48:03.166"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.158" endtime="20231023 19:48:03.166"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.158" endtime="20231023 19:48:03.166"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231023 19:48:03.370" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231023 19:48:03.166" endtime="20231023 19:48:03.370"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231023 19:48:03.370" endtime="20231023 19:48:03.439"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.166" endtime="20231023 19:48:03.439"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:00.668" endtime="20231023 19:48:03.439"/>
+</test>
+<test id="s1-t3" name="Cenario: Envio de Feedback com acesso a conta" line="19">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231023 19:48:03.440" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231023 19:48:03.439" endtime="20231023 19:48:05.299"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.439" endtime="20231023 19:48:05.299"/>
+</kw>
+<kw name="Dado que desejo enviar um email ao sac da Altoro depois de ter acessado minha conta" library="ResourceFormulario">
+<kw name="Fazer Login" library="LoginPage">
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<kw name="Acessa Tela Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:AccountLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:05.301" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231023 19:48:05.300" endtime="20231023 19:48:05.507"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.300" endtime="20231023 19:48:05.507"/>
+</kw>
+<kw name="Usuario" library="LoginPage">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:uid</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:05.508" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231023 19:48:05.507" endtime="20231023 19:48:05.605"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.507" endtime="20231023 19:48:05.605"/>
+</kw>
+<kw name="Senha" library="LoginPage">
+<arg>${pswd}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:passw</arg>
+<arg>${pswd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:05.606" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231023 19:48:05.621" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231023 19:48:05.640" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231023 19:48:05.605" endtime="20231023 19:48:05.640"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.605" endtime="20231023 19:48:05.640"/>
+</kw>
+<kw name="Botao Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:btnSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:05.641" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231023 19:48:05.641" endtime="20231023 19:48:05.998"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.641" endtime="20231023 19:48:05.998"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.300" endtime="20231023 19:48:05.998"/>
+</kw>
+<kw name="Btn Feedback" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:HyperLink4</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:05.999" level="INFO">Clicking element 'id:HyperLink4'.</msg>
+<status status="PASS" starttime="20231023 19:48:05.998" endtime="20231023 19:48:06.325"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.998" endtime="20231023 19:48:06.325"/>
+</kw>
+<kw name="Valida Tela Feedback" library="FormularioPage">
+<arg>${msgTelaFeedback}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgTelaFeedbak}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:06.326" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Feedback'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.325" endtime="20231023 19:48:06.349"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.325" endtime="20231023 19:48:06.349"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:05.300" endtime="20231023 19:48:06.349"/>
+</kw>
+<kw name="Quando validar que o nome ja vira preenchido" library="ResourceFormulario">
+<kw name="Valida Nome Preenchido" library="FormularioPage">
+<arg>${nomeConta}</arg>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${nomeLogado}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231023 19:48:06.373" level="INFO">Text field 'name:name' contains text 'Admin User'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.349" endtime="20231023 19:48:06.373"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.349" endtime="20231023 19:48:06.373"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.349" endtime="20231023 19:48:06.373"/>
+</kw>
+<kw name="E preencher os dados restantes do formulario" library="ResourceFormulario">
+<kw name="Insere Email" library="FormularioPage">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email_addr</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:06.374" level="INFO">Typing text 'eliud_kipchoge@gmail.com' into text field 'name:email_addr'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.374" endtime="20231023 19:48:06.411"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.373" endtime="20231023 19:48:06.411"/>
+</kw>
+<kw name="Insere Assunto" library="FormularioPage">
+<arg>${assunto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:subject</arg>
+<arg>${assunto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:06.411" level="INFO">Typing text 'Investimentos - Teste' into text field 'name:subject'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.411" endtime="20231023 19:48:06.447"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.411" endtime="20231023 19:48:06.447"/>
+</kw>
+<kw name="Insere Texto" library="FormularioPage">
+<arg>${texto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:comments</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:06.448" level="INFO">Typing text 'Compre tudo em PETR3' into text field 'name:comments'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.448" endtime="20231023 19:48:06.479"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.447" endtime="20231023 19:48:06.479"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.373" endtime="20231023 19:48:06.479"/>
+</kw>
+<kw name="Entao sera enviado o email ao time responsavel" library="ResourceFormulario">
+<kw name="Btn Enviar" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:06.480" level="INFO">Clicking element 'name:submit'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.480" endtime="20231023 19:48:06.674"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.480" endtime="20231023 19:48:06.674"/>
+</kw>
+<kw name="Valida Envio Feedback" library="FormularioPage">
+<arg>${msgEnvio}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgEnvio}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:06.675" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Thank You'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.674" endtime="20231023 19:48:06.689"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.674" endtime="20231023 19:48:06.689"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.480" endtime="20231023 19:48:06.689"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231023 19:48:06.905" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231023 19:48:06.689" endtime="20231023 19:48:06.905"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231023 19:48:06.905" endtime="20231023 19:48:06.972"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.689" endtime="20231023 19:48:06.972"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:03.439" endtime="20231023 19:48:06.972"/>
+</test>
+<test id="s1-t4" name="Cenario: Limpar o formulario com acesso a conta" line="25">
+<kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231023 19:48:06.973" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231023 19:48:06.973" endtime="20231023 19:48:08.835"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.973" endtime="20231023 19:48:08.835"/>
+</kw>
+<kw name="Dado que desejo enviar um email ao sac da Altoro depois de ter acessado minha conta" library="ResourceFormulario">
+<kw name="Fazer Login" library="LoginPage">
+<arg>${usuario}</arg>
+<arg>${senha}</arg>
+<kw name="Acessa Tela Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:AccountLink</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:08.836" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231023 19:48:08.836" endtime="20231023 19:48:09.044"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:08.836" endtime="20231023 19:48:09.044"/>
+</kw>
+<kw name="Usuario" library="LoginPage">
+<arg>${user}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:uid</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.045" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.044" endtime="20231023 19:48:09.141"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.044" endtime="20231023 19:48:09.141"/>
+</kw>
+<kw name="Senha" library="LoginPage">
+<arg>${pswd}</arg>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:passw</arg>
+<arg>${pswd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.141" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231023 19:48:09.156" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231023 19:48:09.177" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231023 19:48:09.141" endtime="20231023 19:48:09.177"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.141" endtime="20231023 19:48:09.177"/>
+</kw>
+<kw name="Botao Login" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:btnSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.177" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.177" endtime="20231023 19:48:09.520"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.177" endtime="20231023 19:48:09.520"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:08.835" endtime="20231023 19:48:09.520"/>
+</kw>
+<kw name="Btn Feedback" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:HyperLink4</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.520" level="INFO">Clicking element 'id:HyperLink4'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.520" endtime="20231023 19:48:09.729"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.520" endtime="20231023 19:48:09.729"/>
+</kw>
+<kw name="Valida Tela Feedback" library="FormularioPage">
+<arg>${msgTelaFeedback}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgTelaFeedbak}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:09.730" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Feedback'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.730" endtime="20231023 19:48:09.752"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.729" endtime="20231023 19:48:09.752"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:08.835" endtime="20231023 19:48:09.752"/>
+</kw>
+<kw name="Quando validar que o nome ja vira preenchido" library="ResourceFormulario">
+<kw name="Valida Nome Preenchido" library="FormularioPage">
+<arg>${nomeConta}</arg>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${nomeLogado}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231023 19:48:09.776" level="INFO">Text field 'name:name' contains text 'Admin User'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.752" endtime="20231023 19:48:09.776"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.752" endtime="20231023 19:48:09.776"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.752" endtime="20231023 19:48:09.776"/>
+</kw>
+<kw name="E preencher os dados restantes do formulario" library="ResourceFormulario">
+<kw name="Insere Email" library="FormularioPage">
+<arg>${email}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:email_addr</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.776" level="INFO">Typing text 'eliud_kipchoge@gmail.com' into text field 'name:email_addr'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.776" endtime="20231023 19:48:09.816"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.776" endtime="20231023 19:48:09.816"/>
+</kw>
+<kw name="Insere Assunto" library="FormularioPage">
+<arg>${assunto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:subject</arg>
+<arg>${assunto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.816" level="INFO">Typing text 'Investimentos - Teste' into text field 'name:subject'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.816" endtime="20231023 19:48:09.856"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.816" endtime="20231023 19:48:09.856"/>
+</kw>
+<kw name="Insere Texto" library="FormularioPage">
+<arg>${texto}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:comments</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.856" level="INFO">Typing text 'Compre tudo em PETR3' into text field 'name:comments'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.856" endtime="20231023 19:48:09.895"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.856" endtime="20231023 19:48:09.895"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.776" endtime="20231023 19:48:09.895"/>
+</kw>
+<kw name="E clicar no botao que apaga as informacoes preenchidas" library="ResourceFormulario">
+<kw name="Btn Limpar Formulario" library="FormularioPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://Input[@type='reset']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231023 19:48:09.895" level="INFO">Clicking element 'xpath://Input[@type='reset']'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.895" endtime="20231023 19:48:09.919"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.895" endtime="20231023 19:48:09.919"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.895" endtime="20231023 19:48:09.919"/>
+</kw>
+<kw name="Entao estara com nome preenchido mas sem o restante das informacoes" library="ResourceFormulario">
+<kw name="Valida Nome Preenchido" library="FormularioPage">
+<arg>${nomeConta}</arg>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${nomeLogado}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231023 19:48:09.934" level="INFO">Text field 'name:name' contains text 'Admin User'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.920" endtime="20231023 19:48:09.934"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.920" endtime="20231023 19:48:09.934"/>
+</kw>
+<kw name="Valida Tela Feedback" library="FormularioPage">
+<arg>${msgTelaFeedback}</arg>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1</arg>
+<arg>${msgTelaFeedbak}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231023 19:48:09.935" level="INFO">Verifying element 'xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1' contains exact text 'Feedback'.</msg>
+<status status="PASS" starttime="20231023 19:48:09.935" endtime="20231023 19:48:09.943"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.935" endtime="20231023 19:48:09.943"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.920" endtime="20231023 19:48:09.943"/>
+</kw>
+<kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231023 19:48:10.128" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231023 19:48:09.943" endtime="20231023 19:48:10.128"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231023 19:48:10.128" endtime="20231023 19:48:10.194"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:09.943" endtime="20231023 19:48:10.194"/>
+</kw>
+<status status="PASS" starttime="20231023 19:48:06.973" endtime="20231023 19:48:10.194"/>
+</test>
+<status status="PASS" starttime="20231023 19:47:57.770" endtime="20231023 19:48:10.195"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Formulario">Formulario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

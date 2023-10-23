@@ -36,4 +36,3 @@ Entao sera exibido uma mensagem solicitando a correcao da senha
 #Cenario: Nao inserir senha ao solicitar novo cartao de credito
 E manter o campo de senha em branco
     Btn Confirma Credito
-    
