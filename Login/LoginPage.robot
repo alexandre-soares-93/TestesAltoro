@@ -29,7 +29,7 @@ Botao Login
 
 Valida Login
     [Arguments]    ${msgBemVindo}
-    Element Text Should Be    xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1   ${msgBemVindo}
+    Element Text Should Be    xpath://h1   ${msgBemVindo}
 
 Valida Erro Login
     [Arguments]    ${msgErro}

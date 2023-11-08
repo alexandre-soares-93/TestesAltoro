@@ -7,7 +7,7 @@ Btn Feedback
 
 Valida Tela Feedback
     [Arguments]    ${msgTelaFeedbak}
-    Element Text Should Be    xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1    ${msgTelaFeedbak}
+    Element Text Should Be    xpath://div//h1    ${msgTelaFeedbak}
 
 Insere Nome 
     [Arguments]    ${nome}
@@ -37,4 +37,4 @@ Btn Limpar Formulario
 
 Valida Envio Feedback
     [Arguments]    ${msgEnvio}
-    Element Text Should Be    xpath:/html/body/table/tbody/tr[2]/td[2]/div/h1    ${msgEnvio}
+    Element Text Should Be    xpath://div//h1    ${msgEnvio}

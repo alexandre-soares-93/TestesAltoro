@@ -20,9 +20,9 @@ Acessa Historico Contas
 
 Valida Historico Contas
     IF    "${contaSelecionada}" == "${contaChecking}"
-        Element Text Should Be    xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1    ${msgChecking}
+        Element Text Should Be    xpath://td[2]//div//h1     ${msgChecking}
     ELSE IF    "${contaSelecionada}" == "${contaCorporate}"
-        Element Text Should Be    xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1    ${msgCorporate}
+        Element Text Should Be    xpath://td[2]//div//h1     ${msgCorporate}
     END
 
 Btn Seleciona Conta

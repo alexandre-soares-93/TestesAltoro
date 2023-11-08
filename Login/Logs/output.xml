@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231013 17:50:12.866" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231106 20:46:21.651" rpa="false" schemaversion="4">
 <suite id="s1" name="Login" source="/Users/alexandresoaresdeoliveira/Documents/Altoro/Login/Login.robot">
 <test id="s1-t1" name="Cenario: Login com usuario e senha validos" line="9">
 <kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
@@ -7,22 +7,22 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231013 17:50:12.978" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
-<status status="PASS" starttime="20231013 17:50:12.977" endtime="20231013 17:50:20.482"/>
+<msg timestamp="20231106 20:46:21.744" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231106 20:46:21.743" endtime="20231106 20:46:25.163"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:12.977" endtime="20231013 17:50:20.482"/>
+<status status="PASS" starttime="20231106 20:46:21.743" endtime="20231106 20:46:25.164"/>
 </kw>
 <kw name="Dado que desejo acessar o IB da Altoro" library="ResourceLogin">
 <kw name="Acessa Tela Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:AccountLink</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:20.485" level="INFO">Clicking element 'id:AccountLink'.</msg>
-<status status="PASS" starttime="20231013 17:50:20.484" endtime="20231013 17:50:20.740"/>
+<msg timestamp="20231106 20:46:25.165" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231106 20:46:25.165" endtime="20231106 20:46:25.403"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:20.484" endtime="20231013 17:50:20.740"/>
+<status status="PASS" starttime="20231106 20:46:25.164" endtime="20231106 20:46:25.403"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:20.483" endtime="20231013 17:50:20.740"/>
+<status status="PASS" starttime="20231106 20:46:25.164" endtime="20231106 20:46:25.403"/>
 </kw>
 <kw name="Quando digitar meu usuario e senha" library="ResourceLogin">
 <kw name="Usuario" library="LoginPage">
@@ -31,10 +31,10 @@
 <arg>id:uid</arg>
 <arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:20.740" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
-<status status="PASS" starttime="20231013 17:50:20.740" endtime="20231013 17:50:20.823"/>
+<msg timestamp="20231106 20:46:25.404" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231106 20:46:25.404" endtime="20231106 20:46:25.509"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:20.740" endtime="20231013 17:50:20.823"/>
+<status status="PASS" starttime="20231106 20:46:25.403" endtime="20231106 20:46:25.509"/>
 </kw>
 <kw name="Senha" library="LoginPage">
 <arg>${senha}</arg>
@@ -42,51 +42,51 @@
 <arg>id:passw</arg>
 <arg>${pswd}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:20.823" level="INFO">Typing password into text field 'id:passw'.</msg>
-<msg timestamp="20231013 17:50:20.839" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231013 17:50:20.859" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231013 17:50:20.823" endtime="20231013 17:50:20.859"/>
+<msg timestamp="20231106 20:46:25.510" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231106 20:46:25.526" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231106 20:46:25.548" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231106 20:46:25.510" endtime="20231106 20:46:25.548"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:20.823" endtime="20231013 17:50:20.859"/>
+<status status="PASS" starttime="20231106 20:46:25.509" endtime="20231106 20:46:25.548"/>
 </kw>
-<kw name="Fazer Login" library="LoginPage">
+<kw name="Botao Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:btnSubmit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:20.860" level="INFO">Clicking element 'name:btnSubmit'.</msg>
-<status status="PASS" starttime="20231013 17:50:20.859" endtime="20231013 17:50:21.354"/>
+<msg timestamp="20231106 20:46:25.549" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231106 20:46:25.548" endtime="20231106 20:46:25.901"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:20.859" endtime="20231013 17:50:21.354"/>
+<status status="PASS" starttime="20231106 20:46:25.548" endtime="20231106 20:46:25.901"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:20.740" endtime="20231013 17:50:21.354"/>
+<status status="PASS" starttime="20231106 20:46:25.403" endtime="20231106 20:46:25.901"/>
 </kw>
 <kw name="Entao sera exibido uma mensagem de boas vindas" library="ResourceLogin">
 <kw name="Valida Login" library="LoginPage">
 <arg>${bemVindo}</arg>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1</arg>
+<arg>xpath://h1</arg>
 <arg>${msgBemVindo}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231013 17:50:21.355" level="INFO">Verifying element 'xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1' contains exact text 'Hello Admin User'.</msg>
-<status status="PASS" starttime="20231013 17:50:21.354" endtime="20231013 17:50:21.376"/>
+<msg timestamp="20231106 20:46:25.902" level="INFO">Verifying element 'xpath://h1' contains exact text 'Hello Admin User'.</msg>
+<status status="PASS" starttime="20231106 20:46:25.902" endtime="20231106 20:46:25.924"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:21.354" endtime="20231013 17:50:21.376"/>
+<status status="PASS" starttime="20231106 20:46:25.901" endtime="20231106 20:46:25.924"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:21.354" endtime="20231013 17:50:21.376"/>
+<status status="PASS" starttime="20231106 20:46:25.901" endtime="20231106 20:46:25.925"/>
 </kw>
 <kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231013 17:50:21.642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231013 17:50:21.376" endtime="20231013 17:50:21.642"/>
+<msg timestamp="20231106 20:46:26.122" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231106 20:46:25.925" endtime="20231106 20:46:26.122"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231013 17:50:21.642" endtime="20231013 17:50:21.723"/>
+<status status="PASS" starttime="20231106 20:46:26.122" endtime="20231106 20:46:26.202"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:21.376" endtime="20231013 17:50:21.723"/>
+<status status="PASS" starttime="20231106 20:46:25.925" endtime="20231106 20:46:26.202"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:12.977" endtime="20231013 17:50:21.723"/>
+<status status="PASS" starttime="20231106 20:46:21.743" endtime="20231106 20:46:26.202"/>
 </test>
 <test id="s1-t2" name="Cenario: Login com usuario invalido" line="14">
 <kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
@@ -94,22 +94,22 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231013 17:50:21.724" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
-<status status="PASS" starttime="20231013 17:50:21.724" endtime="20231013 17:50:23.983"/>
+<msg timestamp="20231106 20:46:26.203" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231106 20:46:26.203" endtime="20231106 20:46:28.077"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:21.724" endtime="20231013 17:50:23.984"/>
+<status status="PASS" starttime="20231106 20:46:26.203" endtime="20231106 20:46:28.077"/>
 </kw>
 <kw name="Dado que desejo acessar o IB da Altoro" library="ResourceLogin">
 <kw name="Acessa Tela Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:AccountLink</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:23.986" level="INFO">Clicking element 'id:AccountLink'.</msg>
-<status status="PASS" starttime="20231013 17:50:23.985" endtime="20231013 17:50:24.216"/>
+<msg timestamp="20231106 20:46:28.079" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231106 20:46:28.078" endtime="20231106 20:46:28.289"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:23.985" endtime="20231013 17:50:24.216"/>
+<status status="PASS" starttime="20231106 20:46:28.078" endtime="20231106 20:46:28.289"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:23.984" endtime="20231013 17:50:24.216"/>
+<status status="PASS" starttime="20231106 20:46:28.078" endtime="20231106 20:46:28.289"/>
 </kw>
 <kw name="Quando digitar o usuario invalido" library="ResourceLogin">
 <kw name="Usuario" library="LoginPage">
@@ -118,10 +118,10 @@
 <arg>id:uid</arg>
 <arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:24.217" level="INFO">Typing text 'userErro' into text field 'id:uid'.</msg>
-<status status="PASS" starttime="20231013 17:50:24.216" endtime="20231013 17:50:24.318"/>
+<msg timestamp="20231106 20:46:28.290" level="INFO">Typing text 'userErro' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231106 20:46:28.290" endtime="20231106 20:46:28.397"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.216" endtime="20231013 17:50:24.318"/>
+<status status="PASS" starttime="20231106 20:46:28.290" endtime="20231106 20:46:28.397"/>
 </kw>
 <kw name="Senha" library="LoginPage">
 <arg>${senha}</arg>
@@ -129,23 +129,23 @@
 <arg>id:passw</arg>
 <arg>${pswd}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:24.318" level="INFO">Typing password into text field 'id:passw'.</msg>
-<msg timestamp="20231013 17:50:24.334" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231013 17:50:24.354" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231013 17:50:24.318" endtime="20231013 17:50:24.354"/>
+<msg timestamp="20231106 20:46:28.398" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231106 20:46:28.413" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231106 20:46:28.433" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231106 20:46:28.397" endtime="20231106 20:46:28.433"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.318" endtime="20231013 17:50:24.354"/>
+<status status="PASS" starttime="20231106 20:46:28.397" endtime="20231106 20:46:28.433"/>
 </kw>
-<kw name="Fazer Login" library="LoginPage">
+<kw name="Botao Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:btnSubmit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:24.355" level="INFO">Clicking element 'name:btnSubmit'.</msg>
-<status status="PASS" starttime="20231013 17:50:24.354" endtime="20231013 17:50:24.830"/>
+<msg timestamp="20231106 20:46:28.433" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231106 20:46:28.433" endtime="20231106 20:46:28.784"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.354" endtime="20231013 17:50:24.830"/>
+<status status="PASS" starttime="20231106 20:46:28.433" endtime="20231106 20:46:28.784"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.216" endtime="20231013 17:50:24.831"/>
+<status status="PASS" starttime="20231106 20:46:28.289" endtime="20231106 20:46:28.784"/>
 </kw>
 <kw name="Entao sera exibido uma mensagem solicitando a correcao do acesso" library="ResourceLogin">
 <kw name="Valida Erro Login" library="LoginPage">
@@ -154,26 +154,26 @@
 <arg>id:_ctl0__ctl0_Content_Main_message</arg>
 <arg>${msgErro}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231013 17:50:24.832" level="INFO">Verifying element 'id:_ctl0__ctl0_Content_Main_message' contains exact text 'Login Failed: We're sorry, but this username or password was not found in our system. Please try again.'.</msg>
-<status status="PASS" starttime="20231013 17:50:24.831" endtime="20231013 17:50:24.854"/>
+<msg timestamp="20231106 20:46:28.785" level="INFO">Verifying element 'id:_ctl0__ctl0_Content_Main_message' contains exact text 'Login Failed: We're sorry, but this username or password was not found in our system. Please try again.'.</msg>
+<status status="PASS" starttime="20231106 20:46:28.784" endtime="20231106 20:46:28.809"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.831" endtime="20231013 17:50:24.854"/>
+<status status="PASS" starttime="20231106 20:46:28.784" endtime="20231106 20:46:28.809"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.831" endtime="20231013 17:50:24.854"/>
+<status status="PASS" starttime="20231106 20:46:28.784" endtime="20231106 20:46:28.809"/>
 </kw>
 <kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231013 17:50:25.114" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231013 17:50:24.854" endtime="20231013 17:50:25.114"/>
+<msg timestamp="20231106 20:46:29.034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231106 20:46:28.809" endtime="20231106 20:46:29.034"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231013 17:50:25.114" endtime="20231013 17:50:25.182"/>
+<status status="PASS" starttime="20231106 20:46:29.034" endtime="20231106 20:46:29.103"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:24.854" endtime="20231013 17:50:25.182"/>
+<status status="PASS" starttime="20231106 20:46:28.809" endtime="20231106 20:46:29.103"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:21.724" endtime="20231013 17:50:25.182"/>
+<status status="PASS" starttime="20231106 20:46:26.202" endtime="20231106 20:46:29.103"/>
 </test>
 <test id="s1-t3" name="Cenario: Login com senha invalida" line="19">
 <kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
@@ -181,22 +181,22 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231013 17:50:25.183" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
-<status status="PASS" starttime="20231013 17:50:25.183" endtime="20231013 17:50:27.253"/>
+<msg timestamp="20231106 20:46:29.104" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231106 20:46:29.103" endtime="20231106 20:46:30.975"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:25.183" endtime="20231013 17:50:27.253"/>
+<status status="PASS" starttime="20231106 20:46:29.103" endtime="20231106 20:46:30.975"/>
 </kw>
 <kw name="Dado que desejo acessar o IB da Altoro" library="ResourceLogin">
 <kw name="Acessa Tela Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:AccountLink</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:27.254" level="INFO">Clicking element 'id:AccountLink'.</msg>
-<status status="PASS" starttime="20231013 17:50:27.254" endtime="20231013 17:50:27.491"/>
+<msg timestamp="20231106 20:46:30.977" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231106 20:46:30.976" endtime="20231106 20:46:31.180"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:27.254" endtime="20231013 17:50:27.491"/>
+<status status="PASS" starttime="20231106 20:46:30.976" endtime="20231106 20:46:31.180"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:27.253" endtime="20231013 17:50:27.491"/>
+<status status="PASS" starttime="20231106 20:46:30.976" endtime="20231106 20:46:31.180"/>
 </kw>
 <kw name="Quando digitar a senha invalida" library="ResourceLogin">
 <kw name="Usuario" library="LoginPage">
@@ -205,10 +205,10 @@
 <arg>id:uid</arg>
 <arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:27.492" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
-<status status="PASS" starttime="20231013 17:50:27.492" endtime="20231013 17:50:27.596"/>
+<msg timestamp="20231106 20:46:31.181" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231106 20:46:31.180" endtime="20231106 20:46:31.277"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:27.491" endtime="20231013 17:50:27.596"/>
+<status status="PASS" starttime="20231106 20:46:31.180" endtime="20231106 20:46:31.277"/>
 </kw>
 <kw name="Senha" library="LoginPage">
 <arg>${senhaErro}</arg>
@@ -216,23 +216,23 @@
 <arg>id:passw</arg>
 <arg>${pswd}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:27.596" level="INFO">Typing password into text field 'id:passw'.</msg>
-<msg timestamp="20231013 17:50:27.613" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231013 17:50:27.633" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231013 17:50:27.596" endtime="20231013 17:50:27.633"/>
+<msg timestamp="20231106 20:46:31.278" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231106 20:46:31.295" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231106 20:46:31.315" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231106 20:46:31.277" endtime="20231106 20:46:31.316"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:27.596" endtime="20231013 17:50:27.633"/>
+<status status="PASS" starttime="20231106 20:46:31.277" endtime="20231106 20:46:31.316"/>
 </kw>
-<kw name="Fazer Login" library="LoginPage">
+<kw name="Botao Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:btnSubmit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:27.633" level="INFO">Clicking element 'name:btnSubmit'.</msg>
-<status status="PASS" starttime="20231013 17:50:27.633" endtime="20231013 17:50:28.008"/>
+<msg timestamp="20231106 20:46:31.316" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231106 20:46:31.316" endtime="20231106 20:46:31.672"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:27.633" endtime="20231013 17:50:28.008"/>
+<status status="PASS" starttime="20231106 20:46:31.316" endtime="20231106 20:46:31.672"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:27.491" endtime="20231013 17:50:28.008"/>
+<status status="PASS" starttime="20231106 20:46:31.180" endtime="20231106 20:46:31.672"/>
 </kw>
 <kw name="Entao sera exibido uma mensagem solicitando a correcao do acesso" library="ResourceLogin">
 <kw name="Valida Erro Login" library="LoginPage">
@@ -241,26 +241,26 @@
 <arg>id:_ctl0__ctl0_Content_Main_message</arg>
 <arg>${msgErro}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231013 17:50:28.009" level="INFO">Verifying element 'id:_ctl0__ctl0_Content_Main_message' contains exact text 'Login Failed: We're sorry, but this username or password was not found in our system. Please try again.'.</msg>
-<status status="PASS" starttime="20231013 17:50:28.009" endtime="20231013 17:50:28.031"/>
+<msg timestamp="20231106 20:46:31.674" level="INFO">Verifying element 'id:_ctl0__ctl0_Content_Main_message' contains exact text 'Login Failed: We're sorry, but this username or password was not found in our system. Please try again.'.</msg>
+<status status="PASS" starttime="20231106 20:46:31.673" endtime="20231106 20:46:31.698"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:28.009" endtime="20231013 17:50:28.031"/>
+<status status="PASS" starttime="20231106 20:46:31.673" endtime="20231106 20:46:31.698"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:28.008" endtime="20231013 17:50:28.031"/>
+<status status="PASS" starttime="20231106 20:46:31.673" endtime="20231106 20:46:31.698"/>
 </kw>
 <kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231013 17:50:28.244" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231013 17:50:28.031" endtime="20231013 17:50:28.244"/>
+<msg timestamp="20231106 20:46:31.906" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231106 20:46:31.698" endtime="20231106 20:46:31.906"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231013 17:50:28.244" endtime="20231013 17:50:28.312"/>
+<status status="PASS" starttime="20231106 20:46:31.906" endtime="20231106 20:46:31.974"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:28.031" endtime="20231013 17:50:28.312"/>
+<status status="PASS" starttime="20231106 20:46:31.698" endtime="20231106 20:46:31.974"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:25.183" endtime="20231013 17:50:28.312"/>
+<status status="PASS" starttime="20231106 20:46:29.103" endtime="20231106 20:46:31.974"/>
 </test>
 <test id="s1-t4" name="Cenario: Login com usuario e senha invalidas" line="24">
 <kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
@@ -268,22 +268,22 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231013 17:50:28.313" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
-<status status="PASS" starttime="20231013 17:50:28.313" endtime="20231013 17:50:30.546"/>
+<msg timestamp="20231106 20:46:31.975" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231106 20:46:31.975" endtime="20231106 20:46:33.975"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:28.313" endtime="20231013 17:50:30.546"/>
+<status status="PASS" starttime="20231106 20:46:31.975" endtime="20231106 20:46:33.976"/>
 </kw>
 <kw name="Dado que desejo acessar o IB da Altoro" library="ResourceLogin">
 <kw name="Acessa Tela Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:AccountLink</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:30.548" level="INFO">Clicking element 'id:AccountLink'.</msg>
-<status status="PASS" starttime="20231013 17:50:30.548" endtime="20231013 17:50:30.781"/>
+<msg timestamp="20231106 20:46:33.977" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231106 20:46:33.977" endtime="20231106 20:46:34.204"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:30.547" endtime="20231013 17:50:30.781"/>
+<status status="PASS" starttime="20231106 20:46:33.976" endtime="20231106 20:46:34.204"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:30.547" endtime="20231013 17:50:30.781"/>
+<status status="PASS" starttime="20231106 20:46:33.976" endtime="20231106 20:46:34.204"/>
 </kw>
 <kw name="Quando digitar usuario e senha invalidos" library="ResourceLogin">
 <kw name="Usuario" library="LoginPage">
@@ -292,10 +292,10 @@
 <arg>id:uid</arg>
 <arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:30.782" level="INFO">Typing text 'userErro' into text field 'id:uid'.</msg>
-<status status="PASS" starttime="20231013 17:50:30.782" endtime="20231013 17:50:30.882"/>
+<msg timestamp="20231106 20:46:34.205" level="INFO">Typing text 'userErro' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231106 20:46:34.204" endtime="20231106 20:46:34.309"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:30.782" endtime="20231013 17:50:30.882"/>
+<status status="PASS" starttime="20231106 20:46:34.204" endtime="20231106 20:46:34.309"/>
 </kw>
 <kw name="Senha" library="LoginPage">
 <arg>${senhaErro}</arg>
@@ -303,23 +303,23 @@
 <arg>id:passw</arg>
 <arg>${pswd}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:30.883" level="INFO">Typing password into text field 'id:passw'.</msg>
-<msg timestamp="20231013 17:50:30.899" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231013 17:50:30.920" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231013 17:50:30.883" endtime="20231013 17:50:30.920"/>
+<msg timestamp="20231106 20:46:34.310" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231106 20:46:34.326" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231106 20:46:34.348" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231106 20:46:34.309" endtime="20231106 20:46:34.348"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:30.883" endtime="20231013 17:50:30.920"/>
+<status status="PASS" starttime="20231106 20:46:34.309" endtime="20231106 20:46:34.349"/>
 </kw>
-<kw name="Fazer Login" library="LoginPage">
+<kw name="Botao Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:btnSubmit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:30.921" level="INFO">Clicking element 'name:btnSubmit'.</msg>
-<status status="PASS" starttime="20231013 17:50:30.921" endtime="20231013 17:50:31.381"/>
+<msg timestamp="20231106 20:46:34.349" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231106 20:46:34.349" endtime="20231106 20:46:34.703"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:30.920" endtime="20231013 17:50:31.381"/>
+<status status="PASS" starttime="20231106 20:46:34.349" endtime="20231106 20:46:34.703"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:30.781" endtime="20231013 17:50:31.381"/>
+<status status="PASS" starttime="20231106 20:46:34.204" endtime="20231106 20:46:34.703"/>
 </kw>
 <kw name="Entao sera exibido uma mensagem solicitando a correcao do acesso" library="ResourceLogin">
 <kw name="Valida Erro Login" library="LoginPage">
@@ -328,26 +328,26 @@
 <arg>id:_ctl0__ctl0_Content_Main_message</arg>
 <arg>${msgErro}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231013 17:50:31.382" level="INFO">Verifying element 'id:_ctl0__ctl0_Content_Main_message' contains exact text 'Login Failed: We're sorry, but this username or password was not found in our system. Please try again.'.</msg>
-<status status="PASS" starttime="20231013 17:50:31.382" endtime="20231013 17:50:31.405"/>
+<msg timestamp="20231106 20:46:34.704" level="INFO">Verifying element 'id:_ctl0__ctl0_Content_Main_message' contains exact text 'Login Failed: We're sorry, but this username or password was not found in our system. Please try again.'.</msg>
+<status status="PASS" starttime="20231106 20:46:34.703" endtime="20231106 20:46:34.726"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:31.381" endtime="20231013 17:50:31.405"/>
+<status status="PASS" starttime="20231106 20:46:34.703" endtime="20231106 20:46:34.726"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:31.381" endtime="20231013 17:50:31.405"/>
+<status status="PASS" starttime="20231106 20:46:34.703" endtime="20231106 20:46:34.726"/>
 </kw>
 <kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231013 17:50:31.598" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231013 17:50:31.405" endtime="20231013 17:50:31.598"/>
+<msg timestamp="20231106 20:46:34.948" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231106 20:46:34.726" endtime="20231106 20:46:34.948"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231013 17:50:31.598" endtime="20231013 17:50:31.666"/>
+<status status="PASS" starttime="20231106 20:46:34.948" endtime="20231106 20:46:35.017"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:31.405" endtime="20231013 17:50:31.666"/>
+<status status="PASS" starttime="20231106 20:46:34.726" endtime="20231106 20:46:35.017"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:28.313" endtime="20231013 17:50:31.666"/>
+<status status="PASS" starttime="20231106 20:46:31.975" endtime="20231106 20:46:35.017"/>
 </test>
 <test id="s1-t5" name="Cenario: Logout do Internet Banking" line="29">
 <kw name="Acessa Banco Digital" library="LoginPage" type="SETUP">
@@ -355,20 +355,20 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231013 17:50:31.667" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
-<status status="PASS" starttime="20231013 17:50:31.667" endtime="20231013 17:50:33.910"/>
+<msg timestamp="20231106 20:46:35.018" level="INFO">Opening browser 'chrome' to base url 'http://altoromutual.com:8080/index.jsp'.</msg>
+<status status="PASS" starttime="20231106 20:46:35.018" endtime="20231106 20:46:37.020"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:31.667" endtime="20231013 17:50:33.910"/>
+<status status="PASS" starttime="20231106 20:46:35.018" endtime="20231106 20:46:37.020"/>
 </kw>
 <kw name="Dado que estou logado no IB" library="ResourceLogin">
 <kw name="Acessa Tela Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:AccountLink</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:33.912" level="INFO">Clicking element 'id:AccountLink'.</msg>
-<status status="PASS" starttime="20231013 17:50:33.911" endtime="20231013 17:50:34.146"/>
+<msg timestamp="20231106 20:46:37.022" level="INFO">Clicking element 'id:AccountLink'.</msg>
+<status status="PASS" starttime="20231106 20:46:37.021" endtime="20231106 20:46:37.253"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:33.911" endtime="20231013 17:50:34.146"/>
+<status status="PASS" starttime="20231106 20:46:37.021" endtime="20231106 20:46:37.253"/>
 </kw>
 <kw name="Usuario" library="LoginPage">
 <arg>${usuario}</arg>
@@ -376,10 +376,10 @@
 <arg>id:uid</arg>
 <arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:34.146" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
-<status status="PASS" starttime="20231013 17:50:34.146" endtime="20231013 17:50:34.251"/>
+<msg timestamp="20231106 20:46:37.254" level="INFO">Typing text 'admin' into text field 'id:uid'.</msg>
+<status status="PASS" starttime="20231106 20:46:37.253" endtime="20231106 20:46:37.359"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:34.146" endtime="20231013 17:50:34.251"/>
+<status status="PASS" starttime="20231106 20:46:37.253" endtime="20231106 20:46:37.359"/>
 </kw>
 <kw name="Senha" library="LoginPage">
 <arg>${senha}</arg>
@@ -387,35 +387,35 @@
 <arg>id:passw</arg>
 <arg>${pswd}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:34.251" level="INFO">Typing password into text field 'id:passw'.</msg>
-<msg timestamp="20231013 17:50:34.268" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231013 17:50:34.290" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231013 17:50:34.251" endtime="20231013 17:50:34.290"/>
+<msg timestamp="20231106 20:46:37.359" level="INFO">Typing password into text field 'id:passw'.</msg>
+<msg timestamp="20231106 20:46:37.376" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231106 20:46:37.398" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231106 20:46:37.359" endtime="20231106 20:46:37.398"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:34.251" endtime="20231013 17:50:34.290"/>
+<status status="PASS" starttime="20231106 20:46:37.359" endtime="20231106 20:46:37.398"/>
 </kw>
-<kw name="Fazer Login" library="LoginPage">
+<kw name="Botao Login" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name:btnSubmit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:34.290" level="INFO">Clicking element 'name:btnSubmit'.</msg>
-<status status="PASS" starttime="20231013 17:50:34.290" endtime="20231013 17:50:34.764"/>
+<msg timestamp="20231106 20:46:37.398" level="INFO">Clicking element 'name:btnSubmit'.</msg>
+<status status="PASS" starttime="20231106 20:46:37.398" endtime="20231106 20:46:37.750"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:34.290" endtime="20231013 17:50:34.764"/>
+<status status="PASS" starttime="20231106 20:46:37.398" endtime="20231106 20:46:37.750"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:33.911" endtime="20231013 17:50:34.764"/>
+<status status="PASS" starttime="20231106 20:46:37.021" endtime="20231106 20:46:37.750"/>
 </kw>
 <kw name="Quando clicar no botao de logoff" library="ResourceLogin">
 <kw name="Logout" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:LoginLink</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231013 17:50:34.765" level="INFO">Clicking element 'id:LoginLink'.</msg>
-<status status="PASS" starttime="20231013 17:50:34.764" endtime="20231013 17:50:35.276"/>
+<msg timestamp="20231106 20:46:37.751" level="INFO">Clicking element 'id:LoginLink'.</msg>
+<status status="PASS" starttime="20231106 20:46:37.751" endtime="20231106 20:46:38.234"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:34.764" endtime="20231013 17:50:35.276"/>
+<status status="PASS" starttime="20231106 20:46:37.751" endtime="20231106 20:46:38.234"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:34.764" endtime="20231013 17:50:35.276"/>
+<status status="PASS" starttime="20231106 20:46:37.751" endtime="20231106 20:46:38.234"/>
 </kw>
 <kw name="Entao sera exibido a tela home do Altoro Mutual" library="ResourceLogin">
 <kw name="Valida Logout" library="LoginPage">
@@ -424,28 +424,28 @@
 <arg>id:AccountLink</arg>
 <arg>${msgTelaLogin}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20231013 17:50:35.277" level="INFO">Verifying element 'id:AccountLink' contains exact text 'ONLINE BANKING LOGIN'.</msg>
-<status status="PASS" starttime="20231013 17:50:35.277" endtime="20231013 17:50:35.295"/>
+<msg timestamp="20231106 20:46:38.235" level="INFO">Verifying element 'id:AccountLink' contains exact text 'ONLINE BANKING LOGIN'.</msg>
+<status status="PASS" starttime="20231106 20:46:38.235" endtime="20231106 20:46:38.254"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:35.276" endtime="20231013 17:50:35.295"/>
+<status status="PASS" starttime="20231106 20:46:38.234" endtime="20231106 20:46:38.254"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:35.276" endtime="20231013 17:50:35.295"/>
+<status status="PASS" starttime="20231106 20:46:38.234" endtime="20231106 20:46:38.254"/>
 </kw>
 <kw name="Encerra Sessao" library="LoginPage" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231013 17:50:35.569" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231013 17:50:35.296" endtime="20231013 17:50:35.569"/>
+<msg timestamp="20231106 20:46:38.526" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231106 20:46:38.254" endtime="20231106 20:46:38.526"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231013 17:50:35.569" endtime="20231013 17:50:35.637"/>
+<status status="PASS" starttime="20231106 20:46:38.526" endtime="20231106 20:46:38.592"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:35.295" endtime="20231013 17:50:35.637"/>
+<status status="PASS" starttime="20231106 20:46:38.254" endtime="20231106 20:46:38.592"/>
 </kw>
-<status status="PASS" starttime="20231013 17:50:31.666" endtime="20231013 17:50:35.637"/>
+<status status="PASS" starttime="20231106 20:46:35.018" endtime="20231106 20:46:38.592"/>
 </test>
-<status status="PASS" starttime="20231013 17:50:12.867" endtime="20231013 17:50:35.637"/>
+<status status="PASS" starttime="20231106 20:46:21.652" endtime="20231106 20:46:38.592"/>
 </suite>
 <statistics>
 <total>

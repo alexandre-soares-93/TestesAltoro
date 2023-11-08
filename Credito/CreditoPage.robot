@@ -3,11 +3,11 @@ Library        SeleniumLibrary
 
 *** Keywords ***
 Btn Tela Credito
-    Click Element    xpath://*[@id="_ctl0__ctl0_Content_Main_promo"]/table/tbody/tr[3]/td/a
+    Click Element    xpath://a[@href="apply.jsp"]
 
 Valida Tela Credito
     [Arguments]    ${msgTelaCredito}
-    Element Text Should Be    xpath:/html/body/table[2]/tbody/tr/td[2]/div/h1    ${msgTelaCredito}
+    Element Text Should Be    xpath://div//h1     ${msgTelaCredito}
 
 Fornece Senha
     [Arguments]    ${senha}
